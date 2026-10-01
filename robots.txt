@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://drbankata.github.io/kartikeya.sangal/sitemap.xml
