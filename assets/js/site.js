@@ -16,7 +16,7 @@
         Leave empty ("") and the page shows a "slot booking opening soon" card instead of the calendar. */
   var WHATSAPP = "919899352267";
   var GOOGLE_FORM = {
-    action: "https://docs.google.com/forms/d/e/1FAIpQLScy6FQY_KMZY3PcvNEhtopQsxOObOZbhbWy8dOx-hGcdg5Ssw/formResponse",
+    action: "", // DISCONNECTED on purpose until Dr Sangal's own Google Form exists (see TODO-details.md). Empty = form opens WhatsApp.
     fields: { name: "entry.1693713653", phone: "entry.864078726", email: "entry.1653371526", location: "entry.726174552", date: "entry.1627332851", concern: "entry.168266271", message: "entry.1382283897" }
   };
   var CAL_URL = "";
