@@ -137,7 +137,7 @@ strong{font-weight:650;color:var(--deep)}
 .includes span{color:#e3eded;font-size:1.05rem}
 
 /* split */
-.split{display:grid;gap:48px;align-items:center}
+.split{display:grid;grid-template-columns:minmax(0,1fr);gap:48px;align-items:center}
 .framed{position:relative;max-width:460px;margin-inline:auto;width:100%}
 .framed img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:999px 999px 28px 28px;box-shadow:var(--shadow)}
 .framed::before{content:"";position:absolute;inset:-14px -14px 14px 14px;border:1.5px solid var(--gold);border-radius:999px 999px 34px 34px;z-index:-1}
@@ -389,3 +389,5 @@ a.ccard:hover b{color:var(--tide)}
 
 .loop .pupil{opacity:0;animation:fadein .8s 2.6s forwards}
 @keyframes fadein{to{opacity:1}}
+/* narrow-screen safety: one-column grids must shrink to the screen, not widen to the longest item (see Bankata AI CLAUDE.md rule 12) */
+.split>*{min-width:0;overflow-wrap:anywhere}
