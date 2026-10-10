@@ -15,6 +15,26 @@
     p{color:rgba(255,255,255,.8);max-width:44ch;margin:0 auto 26px}
     a{display:inline-flex;min-height:50px;align-items:center;padding:0 28px;border-radius:999px;background:#e4c47d;color:#0e3b43;font-weight:700;text-decoration:none}
     .mark{width:84px;margin:0 auto 14px;color:#e4c47d}
+    
+    /* ---------- Designer credit ("Designed by", footer) ---------- */
+    .made-by { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--mb-line); display: flex; justify-content: center; text-align: center; min-width: 0; }
+    .made-by .mb { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; min-height: 44px; justify-content: center; max-width: 100%; color: var(--mb-text); text-decoration: none; overflow-wrap: anywhere; }
+    .made-by .mb:hover { text-decoration: none; color: var(--mb-text); }
+    .made-by .mb-main { display: inline-flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 0 .4em; min-width: 0; }
+    .made-by .mb-pre { font-family: var(--mb-pre-font); font-style: var(--mb-pre-style, normal); font-size: var(--mb-pre-size, 1.1rem); color: var(--mb-muted); letter-spacing: var(--mb-pre-ls, 0); text-transform: var(--mb-pre-tt, none); }
+    .made-by .mb-name { font-family: var(--mb-name-font); font-weight: var(--mb-name-weight, 600); font-size: var(--mb-name-size, 1.05rem); letter-spacing: var(--mb-name-ls, 0); text-transform: var(--mb-name-tt, none); color: var(--mb-name-color, var(--mb-text)); padding-bottom: 2px; border-bottom: 1px solid var(--mb-rest); background: linear-gradient(var(--mb-accent), var(--mb-accent)) 0 100% / 0 2px no-repeat; transition: background-size .35s ease; }
+    .made-by .mb-cred { font-family: var(--mb-cred-font, var(--mb-name-font)); font-size: .86rem; color: var(--mb-muted); }
+    .made-by .mb-arrow { font-family: system-ui, "Segoe UI Symbol", sans-serif; color: var(--mb-accent); display: inline-block; transition: transform .25s ease; font-size: .95em; }
+    .made-by .mb-sub { font-family: var(--mb-sub-font); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--mb-muted); opacity: .85; }
+    .made-by .mb:hover .mb-name, .made-by .mb:focus-visible .mb-name { background-size: 100% 2px; }
+    .made-by .mb:hover .mb-arrow, .made-by .mb:focus-visible .mb-arrow { transform: translate(3px, -3px); }
+    .made-by .mb:focus-visible { outline: 2px solid var(--mb-accent); outline-offset: 4px; border-radius: 4px; }
+    @media (prefers-reduced-motion: reduce) { .made-by .mb-name, .made-by .mb-arrow { transition: none; } }
+    .made-by .mb { padding: 0; background: none; border-radius: 0; font-weight: 400; display: inline-flex; }
+    footer > .made-by { margin: 0; padding: 20px 0 8px; width: min(100%, 560px); }
+    body { grid-template-rows: 1fr auto; box-sizing: border-box; }
+    .made-by { --mb-line: rgba(255,255,255,.14); --mb-text: #dbe7e6; --mb-muted: #a9c2c0; --mb-accent: #7fc0c6; --mb-rest: rgba(127,192,198,.45); --mb-pre-font: 'Fraunces', Georgia, serif; --mb-pre-style: italic; --mb-pre-size: 1.2rem; --mb-name-font: 'Albert Sans', system-ui, sans-serif; --mb-name-weight: 600; --mb-name-color: #fff; --mb-sub-font: 'Albert Sans', system-ui, sans-serif; }
+    
   </style>
 </head>
 <body>
@@ -24,6 +44,7 @@
     <p>The page you were looking for is not here. Everything about Dr Sangal is on the home page.</p>
     <a id="home" href="/">Go to the home page</a>
   </main>
+  <footer><div class="made-by"><a class="mb" href="https://lexmedix.in/services/" target="_blank" rel="noopener" aria-label="Designed by Dr Sudhanshu Bankata (MD, PGP). Website, software and AI services at Lexmedix. Opens in a new tab"><span class="mb-main"><span class="mb-pre">Designed by</span> <span class="mb-name">Dr Sudhanshu Bankata</span> <span class="mb-cred">(MD, PGP)</span><span class="mb-arrow" aria-hidden="true">&#8599;</span></span><span class="mb-sub" aria-hidden="true">Websites &middot; Healthcare software &middot; AI tools</span></a></div></footer>
   <script>
     // Works on a custom domain (root) and on the github.io project path.
     var base = location.hostname.endsWith("github.io") ? "/kartikeya.sangal/" : "/";
